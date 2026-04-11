@@ -78,12 +78,6 @@ class RMSNorm(nn.Module):
 - 再加最终输出 1 个
 - **总计 17 个 RMSNorm**
 
-## 关联笔记
-
-- [[Transformer-架构]] - Transformer 整体架构
-- [[LayerNorm-对比]] - LayerNorm 详细对比
-- [[Pre-Norm-vs-Post-Norm]] - 归一化位置选择
-
 ## 参考资料
 
 - [Root Mean Square Layer Normalization (2019)](https://arxiv.org/abs/1910.07467)
