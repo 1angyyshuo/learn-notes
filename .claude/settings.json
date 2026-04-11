@@ -4,7 +4,12 @@
       "Bash(code --install-extension yzhang.markdown-all-in-one --force)",
       "Bash(code --install-extension shd101wyy.markdown-preview-enhanced --force)",
       "Bash(git config:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit -m 'Initial commit: 搭建 Foam + Obsidian 学习笔记系统:*)",
+      "Bash(git remote:*)",
+      "Bash(git push:*)",
+      "Bash(git commit -m '添加 JavaScript 闭包学习笔记及相关内容:*)",
+      "Bash(git commit:*)"
     ],
     "additionalDirectories": [
       "E:\\learnMarkdown\\10-Projects"
