@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+
+# Foam generated files
+.foamdefinitions
+foam-graph.json
+
+# Build outputs
+_site/
+dist/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/settings.json.local
+.idea/
+*.swp
+*.swo
+
+# Obsidian
+.obsidian/workspace*
+.obsidian/cache
+.trash/
+
+# Temporary files
+*.tmp
+*.temp
+*.log

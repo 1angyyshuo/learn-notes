@@ -1,0 +1,56 @@
+{
+  // Foam 双链笔记配置
+  "foam.files.include": [
+    "**/*.md"
+  ],
+  "foam.files.exclude": [
+    ".vscode/**/*",
+    "_site/**/*",
+    "node_modules/**/*"
+  ],
+  "foam.files.newNotePath": "currentDir",
+  "foam.files.newNoteTitle": "Untitled",
+  "foam.openDailyNote.directory": "50-Daily/51-Journal",
+  "foam.openDailyNote.titleFormat": "yyyy-MM-dd",
+
+  // Markdown 增强配置
+  "[markdown]": {
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
+    },
+    "editor.wordWrap": "on",
+    "editor.formatOnSave": true
+  },
+
+  // Markdown All in One 配置
+  "markdown.extension.toc.levels": "2-6",
+  "markdown.extension.toc.github": true,
+  "markdown.extension.preview.autoShowPreviewToSide": true,
+
+  // Markdown Preview Enhanced 配置
+  "markdown-preview-enhanced.enableScriptExecution": true,
+  "markdown-preview-enhanced.mathRenderingOption": "KaTeX",
+  "markdown-preview-enhanced.codeBlockTheme": "github.css",
+  "markdown-preview-enhanced.previewTheme": "github-light.css",
+
+  // 文件关联
+  "files.associations": {
+    "*.md": "markdown"
+  },
+
+  // 搜索排除
+  "search.exclude": {
+    "_site/**": true,
+    "node_modules/**": true,
+    ".claude/**": true
+  },
+
+  // 编辑器配置
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true
+}

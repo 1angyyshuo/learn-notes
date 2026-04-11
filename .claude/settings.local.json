@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(code --list-extensions)",
+      "Bash(code --install-extension foam.foam-vscode --force)"
+    ]
+  }
+}

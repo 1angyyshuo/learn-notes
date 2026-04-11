@@ -1,0 +1,20 @@
+{
+  "recommendations": [
+    // 核心笔记插件
+    "foam.foam-vscode",                    // Foam 双链笔记
+    "yzhang.markdown-all-in-one",          // Markdown 全能工具
+    "shd101wyy.markdown-preview-enhanced", // 高级 Markdown 预览
+
+    // 辅助插件
+    "esbenp.prettier-vscode",              // 代码格式化
+    "dbaeumer.vscode-eslint",              // ESLint
+    "streetsidesoftware.code-spell-checker", // 拼写检查
+    "ms-vscode.wordcount",                 // 字数统计
+
+    // 可选增强
+    "mushan.vscode-paste-image",           // 粘贴图片
+    "telesoho.vscode-markdown-paste-image", // Markdown 图片粘贴
+    "takumii.markdowntable",               // Markdown 表格编辑
+    "marp-team.marp-vscode"                // Markdown 幻灯片
+  ]
+}

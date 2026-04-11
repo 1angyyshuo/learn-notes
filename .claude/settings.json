@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(code --install-extension yzhang.markdown-all-in-one --force)",
+      "Bash(code --install-extension shd101wyy.markdown-preview-enhanced --force)",
+      "Bash(git config:*)",
+      "Bash(git add:*)"
+    ],
+    "additionalDirectories": [
+      "E:\\learnMarkdown\\10-Projects"
+    ]
+  }
+}

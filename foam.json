@@ -1,0 +1,24 @@
+{
+  "features": {
+    "linkReferenceDefinitions": {
+      "enabled": true,
+      "path": "${workspaceFolder}/.foamdefinitions"
+    },
+    "wikilinks": {
+      "enabled": true
+    },
+    "navigation": {
+      "enabled": true
+    },
+    "graph": {
+      "enabled": true,
+      "showOutOfGraphWarning": false
+    },
+    "tags": {
+      "enabled": true
+    }
+  },
+  "workspaceSync": {
+    "enabled": true
+  }
+}
