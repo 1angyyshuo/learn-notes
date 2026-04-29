@@ -10,10 +10,42 @@
       "Bash(git push:*)",
       "Bash(git commit -m '添加 JavaScript 闭包学习笔记及相关内容:*)",
       "Bash(git commit:*)",
-      "WebFetch(domain:github.com)"
+      "WebFetch(domain:github.com)",
+      "WebSearch",
+      "Bash(python3 -c \"import fitz; doc = fitz.open\\('2406.10774v2.pdf'\\); print\\('Pages:', doc.page_count\\); [print\\(f'--- Page {i+1} ---\\\\n', doc[i].get_text\\(\\)[:1500]\\) for i in range\\(min\\(3, doc.page_count\\)\\)]\")",
+      "Bash(python -c \"import fitz; doc = fitz.open\\('2406.10774v2.pdf'\\); print\\('Pages:', doc.page_count\\); [print\\(f'--- Page {i+1} ---\\\\n', doc[i].get_text\\(\\)[:1500]\\) for i in range\\(min\\(3, doc.page_count\\)\\)]\")",
+      "Bash(pip install *)",
+      "Bash(python3 -c ' *)",
+      "Bash(pdftk 2406.10774v2.pdf dump_data)",
+      "Bash(pdftotext -f 1 -l 3 2406.10774v2.pdf -)",
+      "Bash(pdftotext -f 4 -l 8 2406.10774v2.pdf -)",
+      "Bash(pdftotext -f 9 -l 13 2406.10774v2.pdf -)",
+      "Read(//c/Users/lokaive/.claude/skills/**)",
+      "Read(//c/Users/lokaive/claude/**)",
+      "Read(//c/Users/lokaive/**)",
+      "Bash(python3 -c \"import markdown,weasyprint\")",
+      "Bash(python3 -c \"from weasyprint import HTML; print\\('weasyprint OK'\\)\")",
+      "Bash(python3 -c \"import markdown, pdfkit; print\\('OK'\\)\")",
+      "Bash(npm install *)",
+      "Bash(node ~/.claude/skills/browser/scripts/start.js)",
+      "Bash(node ~/.claude/skills/browser/scripts/nav.js \"file:///$\\(pwd\\)/2406.10774v2.pdf\")",
+      "Bash(node ~/.claude/skills/browser/scripts/nav.cjs \"file:///$\\(pwd\\)/2406.10774v2.pdf\")",
+      "Bash(node ~/.claude/skills/browser/scripts/start.cjs)",
+      "Bash(curl -s http://localhost:9222/json/list)",
+      "Bash(python3 -c \"import fitz; print\\('PyMuPDF available'\\)\")",
+      "Bash(pip3 install *)",
+      "Bash(python3)",
+      "Bash(python extract_figures_v2.py)",
+      "Bash(conda info *)",
+      "Bash(mkdir -p \"quest\")",
+      "Bash(cp quest_analysis/*.md quest/)",
+      "Bash(cp quest_analysis/SA25225338_王硕_作业2.pdf quest/)",
+      "Bash(cp quest_analysis/SA25225338_王硕_作业2.docx quest/)",
+      "Bash(mkdir -p quest/images)"
     ],
     "additionalDirectories": [
-      "E:\\learnMarkdown\\10-Projects"
+      "E:\\learnMarkdown\\10-Projects",
+      "e:\\learnMarkdown\\.claude\\skills"
     ]
   }
 }
