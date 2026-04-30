@@ -333,6 +333,11 @@ Quest 解决：长序列 Attention 计算稀疏化
 
 ---
 
+## 关联笔记
+
+- [[模型量化-AWQ-GPTQ]]
+- [[分布式训练基础]]
+
 ## 参考资料
 
 - [vLLM 官方文档](https://docs.vllm.ai/)
