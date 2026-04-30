@@ -296,6 +296,64 @@ llm = LLM(
 )
 ```
 
+### 5.3 小模型（3B 级）吞吐参考
+
+3B 模型（如 Qwen2.5-3B、Phi-3-mini、Llama-3.2-3B）属于小参数规模，**decode 阶段通常受显存带宽限制**，而非算力限制。
+
+#### 吞吐指标定义
+
+| 指标 | 含义 | 3B 模型典型值（FP16，单卡 A100） |
+|------|------|----------------------------------|
+| **Prefill 吞吐** | 处理输入 prompt 的速度 | 2000–5000 tokens/s |
+| **Decode 吞吐** | 生成输出 token 的速度 | bs=1 时 80–150 tok/s；bs=64 时可达 2000+ tok/s |
+
+#### 典型硬件参考（连续批处理）
+
+| GPU | 显存带宽 | Decode（bs=1） | Decode（bs=16） | Decode（bs=64） |
+|-----|----------|----------------|-----------------|-----------------|
+| A100 80GB | 2 TB/s | ~120 tok/s | ~1500 tok/s | ~4000 tok/s |
+| A10 24GB | 600 GB/s | ~40 tok/s | ~500 tok/s | ~1200 tok/s |
+| 4090 24GB | 1 TB/s | ~70 tok/s | ~900 tok/s | ~2500 tok/s |
+| L4 24GB | 300 GB/s | ~20 tok/s | ~250 tok/s | ~600 tok/s |
+
+> 量化（AWQ/GPTQ 4-bit）后权重体积减半，decode 吞吐可再提升 **30–60%**。
+
+#### 3B 模型调优要点
+
+```python
+llm = LLM(
+    model="Qwen/Qwen2.5-3B-Instruct",
+    max_num_seqs=64,            # 甜点区：32-64，平衡吞吐与延迟
+    max_num_batched_tokens=4096,
+    gpu_memory_utilization=0.95,  # 3B 模型 KV Cache 很小，可提高利用率
+    enable_prefix_caching=True,   # 共享系统提示场景收益明显
+)
+```
+
+**特殊考量**：
+- 3B 模型单卡即可部署，无需 TP/PP
+- KV Cache 极小（约几百 MB），可支持极大 batch 或极长上下文
+- Attention 计算占比低，PagedAttention 优势不如大模型明显
+- 输入输出都很短（< 100 tokens）时，调度开销可能成为瓶颈
+
+#### 压测命令
+
+```bash
+# 启动服务
+python -m vllm.entrypoints.openai.api_server \
+    --model Qwen/Qwen2.5-3B-Instruct \
+    --max-num-seqs 64
+
+# benchmark
+python benchmarks/benchmark_serving.py \
+    --backend vllm \
+    --dataset-name random \
+    --model Qwen/Qwen2.5-3B-Instruct \
+    --num-prompts 1000 \
+    --max-input-length 512 \
+    --max-output-length 256
+```
+
 ---
 
 ## 6. 与 Quest 的结合
