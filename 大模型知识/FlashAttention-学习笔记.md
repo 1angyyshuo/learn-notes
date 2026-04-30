@@ -189,6 +189,30 @@ SRAM 大小: M = 100KB (示例)
 - H100 上达 **1.5-2×** FlashAttention-2
 - FP8 下高达 **740 TFLOPS**
 
+### 3.4 FlashAttention-4 (2026)
+
+**版本**: `fa4-v4.0.0.beta4` (2026年3月发布)
+
+**针对硬件**：NVIDIA Hopper (H100) 和 Blackwell (B200)
+
+**核心创新**：
+
+| 特性 | 说明 |
+|------|------|
+| **CuTeDSL 重写** | 使用 NVIDIA CuTeDSL 重新实现，更灵活的 tensor 操作 |
+| **Blackwell 支持** | 原生支持 B200 GPU 的 FP4/FP6 精度 |
+| **动态调度** | 根据序列长度和 head dim 自动选择最优 kernel |
+| **多模态优化** | 针对图像、视频等非文本序列的特殊优化 |
+
+**安装**：
+```bash
+pip install flash-attn-4
+```
+
+**性能**：
+- B200 上比 FlashAttention-3 再提升 **1.3-1.8×**
+- 支持更长的上下文（up to 10M tokens）
+
 ---
 
 ## 4. 显存与复杂度分析
