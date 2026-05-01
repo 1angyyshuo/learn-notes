@@ -349,6 +349,7 @@ KV Cache 存储的：每层 K 和 V（N×dim），FlashAttention 不影响这个
 - [[vLLM-学习笔记]]
 - [[模型量化-AWQ-GPTQ]]
 - [[分布式训练基础]]
+- [[vLLM-GRPO-LoRA训练适配]]
 
 ## 参考资料
 
